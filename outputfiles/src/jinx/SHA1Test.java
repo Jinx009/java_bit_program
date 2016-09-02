@@ -40,7 +40,6 @@ public class SHA1Test {
     public static void main(String[] args){
         String str = "待加密数据";
         String str2 = SHA1(str);
-
         System.out.println(str2);
     }
 
