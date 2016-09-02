@@ -32,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MD5Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MD5Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/outputfiles/src/jinx/MD5Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="239">
@@ -40,6 +40,18 @@
               <folding>
                 <element signature="e#1050#1051#0" expanded="true" />
                 <element signature="e#1108#1109#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SHA1Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/outputfiles/src/jinx/SHA1Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,6 +81,7 @@
         <option value="$PROJECT_DIR$/outputfiles/src/jinx/MapValueChangeTest.java" />
         <option value="$PROJECT_DIR$/outputfiles/src/jinx/UnicodeTest.java" />
         <option value="$PROJECT_DIR$/outputfiles/src/jinx/MD5Test.java" />
+        <option value="$PROJECT_DIR$/outputfiles/src/jinx/SHA1Test.java" />
       </list>
     </option>
   </component>
@@ -161,7 +174,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.MD5Test">
+  <component name="RunManager" selected="Application.SHA1Test">
     <configuration default="false" name="PrintlnTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -230,6 +243,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="jinx.MD5Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="outputfiles" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SHA1Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jinx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="jinx.SHA1Test" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -476,18 +509,20 @@
       <listeners />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.PrintlnTest" />
       <item index="1" class="java.lang.String" itemvalue="Application.MapValueChangeTest" />
       <item index="2" class="java.lang.String" itemvalue="Application.UnicodeTest" />
       <item index="3" class="java.lang.String" itemvalue="Application.MD5Test" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SHA1Test" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.MD5Test" />
-        <item index="1" class="java.lang.String" itemvalue="Application.UnicodeTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MapValueChangeTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.PrintlnTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.SHA1Test" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MD5Test" />
+        <item index="2" class="java.lang.String" itemvalue="Application.UnicodeTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MapValueChangeTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.PrintlnTest" />
       </list>
     </recent_temporary>
   </component>
@@ -519,7 +554,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32831737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32831737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -606,6 +641,16 @@
           <folding>
             <element signature="e#1050#1051#0" expanded="true" />
             <element signature="e#1108#1109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputfiles/src/jinx/SHA1Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
