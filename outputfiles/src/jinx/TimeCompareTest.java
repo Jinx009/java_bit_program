@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * JAVA时间比较先后顺序
+ * JAVA时间比较先后顺序程序
  */
 public class TimeCompareTest {
 
