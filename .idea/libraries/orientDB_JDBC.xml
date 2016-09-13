@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="orientDB-JDBC">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../files/jar/orientDB-JDBC" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../files/jar/orientDB-JDBC" recursive="false" />
+  </library>
+</component>
