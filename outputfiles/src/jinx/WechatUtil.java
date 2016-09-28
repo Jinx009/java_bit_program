@@ -15,9 +15,9 @@ import java.io.IOException;
  */
 public class WechatUtil {
 
-    public static final String appId = "";
+    public static final String appId = "wxdc27e7efd0da49ce";
     public static final String appSecret = "7c62d78bfa8bc860845c5f9e3f68e775";
-    public static final String accessToken = "FmZ6USUD0zab2ygpBsmrh997VBluJhvkIs0n5tKE0zPv6a7lLP57EGYKeeMutjaRCQfphL4fEi0MEFBNCELn8ZZCZG-OVqoL3v2PHd9odq_rjH5qiSLE2mBaAvrTge6jUUNjAIAIIB";
+    public static final String accessToken = "XL91B2refRPkEd8TC_w-VoGtEewj6CaZqgkRnim_l7r8OSDHbzSuyXyw72eNEaQcRtDaC9LUMGvkBuJ1xAv35Qg0aifJkmXSB6QdAH1IQSDkEUhaLO51BkrlqT62SNhmJAQgACAFWM";
 
 
     /**
@@ -61,7 +61,7 @@ public class WechatUtil {
         String menuStr =
                     "{\"button\":["+
                         "{\"name\":\"物业360\",\"sub_button\":["+
-                            "{\"type\":\"view\",\"name\":\"浦东空港\",\"url\":\"http:\\/\\/www.720qj.com\\/s1\\/a2.aspx?id=3397\"}"+
+                            "{\"type\":\"view\",\"name\":\"浦东空港\",\"url\":\"http:\\/\\/www.720qj.com\\/s1\\/a2.aspx?id=3842\"}"+
                         "]},"+
                         "{\"name\":\"物业项目\",\"sub_button\":["+
                             "{\"type\":\"click\",\"name\":\"物业出租\",\"key\":\"V_RENT\"},"+
@@ -89,8 +89,8 @@ public class WechatUtil {
 
     public static void main(String[] args) throws  IOException{
         //getAccessToken();
-        //System.out.println(getMenuJson());
-        createMenu();
+        System.out.println(getMenuJson());
+        //createMenu();
     }
 
 
