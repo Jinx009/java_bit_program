@@ -3,50 +3,41 @@ package jinx;
 
 /**
  * Created by jinx on 9/28/16.
- * 校验银行卡
+ * 校验银行卡 (部分信用卡校验有问题参照)
  */
 public class BankCardCheck {
 
     public static String check(String bankCardNum){
-        int sumOdd = 0,sumEven = 0;
+        int sum = 0;
+        int digit = 0;
+        int addend = 0;
         if(bankCardNum==null||"".equals(bankCardNum))
             return "银行卡号不能为空!";
 
         int length = bankCardNum.length();
-        String lastNum = bankCardNum.substring(length-1,length);
-        int temp = 0;
-        bankCardNum = bankCardNum.substring(0,length-1);
-        for (int i = length-1; i >=1; i--) {
-            temp = Integer.valueOf(bankCardNum.substring(i-1,i));// 从末位一位开始提取，每一位上的数值
-            if(length%2==1){
-                if(i%2==0){
-                    temp = 2*temp;
-                    if(temp>10)
-                        temp = temp - 9;
-                    sumEven += temp;
-                } else{
-                    sumOdd += temp;
+        boolean timesTwo = false;
+        for (int i = length-1; i >=0; i--) {
+            digit = Integer.valueOf(bankCardNum.substring(i,i+1));
+            if(timesTwo){
+                addend = digit*2;
+                if(addend>9){
+                    addend -= 9;
                 }
             }else{
-                if(i%2==1){
-                    temp = 2*temp;
-                    if(temp>10)
-                        temp = temp - 9;
-                    sumEven += temp;
-                } else{
-                    sumOdd += temp;
-                }
+                addend = digit;
             }
+            sum += addend;
+            timesTwo = !timesTwo;
         }
-        if ((sumOdd + sumEven+Integer.valueOf(lastNum)) % 10 == 0){
+        int modulus = sum%10;
+        if (modulus == 0){
             return "success";
-        }
-        else{
+        }else{
             return "银行卡号不合法!";
         }
     }
 
     public static void main(String[] args) {
-        System.out.println(check("6217580800000078105"));
+        System.out.println(check("6212261001016446715"));
     }
 }

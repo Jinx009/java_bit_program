@@ -1,7 +1,7 @@
 package jinx;
 
 /**
- * Created by jinx on 10/8/16.
+ * 字符串包含另外一个字符串判断
  */
 public class IndexOfTest {
 
