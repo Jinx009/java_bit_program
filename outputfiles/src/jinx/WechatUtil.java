@@ -17,7 +17,7 @@ public class WechatUtil {
 
     public static final String appId = "wxd";
     public static final String appSecret = "7c62d78bfa8bc860845c5f9e3f68e775";
-    public static final String accessToken = "XL91B2refRPkEd8TC_w-VoGtEewj6CaZqgkRnim_l7r8OSDHbzSuyXyw72eNEaQcRtDaC9LUMGvkBuJ1xAv35Qg0aifJkmXSB6QdAH1IQSDkEUhaLO51BkrlqT62SNhmJAQgACAFWM";
+    public static final String accessToken = "umn1bZk_Vsb7zKchHYkFfGjOx8gwEE9nOoEdv7dI9WsIVrW2a36nS8iJM8GKxjSNhNJNLgMwkKWHX8VqikD2Pq8_CySYlSB-D1fcbXiD2DPaQEyrI-IsxiBIqM8TZGqRHBUeAHAUOH";
 
 
     /**
@@ -64,6 +64,7 @@ public class WechatUtil {
                             "{\"type\":\"view\",\"name\":\"浦东空港\",\"url\":\"http:\\/\\/www.720qj.com\\/s1\\/a2.aspx?id=3842\"}"+
                         "]},"+
                         "{\"name\":\"物业项目\",\"sub_button\":["+
+                            "{\"type\":\"view\",\"name\":\"租赁月讯\",\"url\":\"http:\\/\\/yxchay.epub360.com\\/v2\\/manage\\/book\\/hdzqml\"}," +
                             "{\"type\":\"click\",\"name\":\"物业出租\",\"key\":\"V_RENT\"},"+
                             "{\"type\":\"click\",\"name\":\"开发项目\",\"key\":\"V_DEV\"},"+
                             "{\"type\":\"click\",\"name\":\"我们的客户\",\"key\":\"V_CUSTOMER\"}"+
@@ -89,8 +90,8 @@ public class WechatUtil {
 
     public static void main(String[] args) throws  IOException{
         //getAccessToken();
-        System.out.println(getMenuJson());
-        //createMenu();
+        //System.out.println(getMenuJson());
+        createMenu();
     }
 
 
