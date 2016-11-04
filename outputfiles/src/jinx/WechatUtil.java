@@ -15,9 +15,9 @@ import java.io.IOException;
  */
 public class WechatUtil {
 
-    public static final String appId = "wxd";
+    public static final String appId = "wxdc2";
     public static final String appSecret = "7c62d78bfa8bc860845c5f9e3f68e775";
-    public static final String accessToken = "umn1bZk_Vsb7zKchHYkFfGjOx8gwEE9nOoEdv7dI9WsIVrW2a36nS8iJM8GKxjSNhNJNLgMwkKWHX8VqikD2Pq8_CySYlSB-D1fcbXiD2DPaQEyrI-IsxiBIqM8TZGqRHBUeAHAUOH";
+    public static final String accessToken = "ux1KkyhlIvY02UhZ2kaH0C3wCm4URdwXE3QBcjE3eEoVq4gHdieIUk4aiMNwbn43Hy-96eA34GVfuWm-O-TkCOFbwYYni8p-tDnQ-D-iV7RE54aU0ueGSWuuU_MpuyF-HVHgAGARFR";
 
 
     /**
@@ -61,7 +61,7 @@ public class WechatUtil {
         String menuStr =
                     "{\"button\":["+
                         "{\"name\":\"物业360\",\"sub_button\":["+
-                            "{\"type\":\"view\",\"name\":\"浦东空港\",\"url\":\"http:\\/\\/www.720qj.com\\/s1\\/a2.aspx?id=3842\"}"+
+                            "{\"type\":\"view\",\"name\":\"浦东空港\",\"url\":\"http:\\/\\/www.goodmanpudonglogistics.com\\/JMWL\"}"+
                         "]},"+
                         "{\"name\":\"物业项目\",\"sub_button\":["+
                             "{\"type\":\"view\",\"name\":\"租赁月讯\",\"url\":\"http:\\/\\/yxchay.epub360.com\\/v2\\/manage\\/book\\/hdzqml\"}," +
@@ -89,7 +89,7 @@ public class WechatUtil {
     }
 
     public static void main(String[] args) throws  IOException{
-        //getAccessToken();
+//        getAccessToken();
         //System.out.println(getMenuJson());
         createMenu();
     }
