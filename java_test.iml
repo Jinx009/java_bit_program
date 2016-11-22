@@ -3,5 +3,6 @@
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="httpClient" level="project" />
+    <orderEntry type="library" name="json" level="project" />
   </component>
 </module>

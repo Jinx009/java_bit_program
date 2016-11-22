@@ -11,5 +11,6 @@
     <orderEntry type="library" exported="" name="httpClient" level="project" />
     <orderEntry type="library" exported="" name="orientDB-JDBC" level="project" />
     <orderEntry type="library" name="apache-tomcat" level="project" />
+    <orderEntry type="library" name="json" level="project" />
   </component>
 </module>

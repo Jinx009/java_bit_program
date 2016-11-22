@@ -18,6 +18,8 @@ public class TimeCompareTest {
         }else{
             System.out.println("时间还没到");
         }
+
+        System.out.println(nowDate.getHours());
     }
 
 }
