@@ -21,14 +21,13 @@ public class HttpPostUtil {
 
         DefaultHttpClient httpClient = new DefaultHttpClient();
         HttpPost post = new HttpPost(url);
-        System.out.println(menuStr);
-//        post.setEntity(new StringEntity(menuStr,"UTF-8"));
+        post.addHeader("Content-type","application/json; charset=utf-8");
+        post.setHeader("Accept", "application/json");
         post.setEntity(new StringEntity(menuStr, Charset.forName("UTF-8")));
         HttpResponse response = httpClient.execute(post);
         String jsonStr = EntityUtils.toString(response.getEntity(),"UTF-8");
         System.out.println(jsonStr);
 
-        System.out.print("=".equals("="));
 
     }
 

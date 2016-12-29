@@ -28,7 +28,6 @@ public class HttpPostUtil {
         String jsonStr = EntityUtils.toString(response.getEntity(),"UTF-8");
         System.out.println(jsonStr);
 
-        System.out.print("=".equals("="));
 
     }
 
