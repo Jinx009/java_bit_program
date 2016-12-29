@@ -38,6 +38,6 @@ public class BankCardCheck {
     }
 
     public static void main(String[] args) {
-        System.out.println(check("62318500100056908"));
+        System.out.println(check("6214851215327632"));
     }
 }
