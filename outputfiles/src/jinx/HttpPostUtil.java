@@ -15,9 +15,34 @@ import java.nio.charset.Charset;
 public class HttpPostUtil {
 
     public static void main(String[] args) throws IOException {
-        String menuStr = "{\"adType\":\"12\"}";
+        String menuStr = "{" +
+                "\"baseId\":\"000478ad5d03\"," +
+                "\"fatherType\":1," +
+                "\"sonType\":1," +
+                "\"father\":{ \"mac\":\"10086\"," +
+                "\"channelId\":\"\"," +
+                "\"lastSeenTime\":\"2017-02-28 08:55:47\"," +
+                "\"panId\":\"7\"," +
+                "\"heartbeatInterval\":\"120\"" +
+                "}," +
+                "\"sign\":\"000478ad5d03\"," +
+                "\"signType\":0," +
+                "\"son\":" +
+                "[" +
+                "{\"mac\":\"000478ad5d03\"," +
+                "\"channelId\":\"\"," +
+                "\"panId\":\"7\"," +
+                "\"heartbeatInterval\":\"60\"" +
+                " }," +
+                "{ \"mac\":\"000478ad5d03\"," +
+                "\"channelId\":\"\"," +
+                "\"panId\":\"7\"," +
+                "\"heartbeatInterval\":\"60\"" +
+                "}" +
+                "]" +
+                "}";
 
-        String url = "http://172.17.192.93:8030/mapi/adList";
+        String url = "http://127.0.0.1:9001/iot/common/iot/uploadData";
 
         DefaultHttpClient httpClient = new DefaultHttpClient();
         HttpPost post = new HttpPost(url);

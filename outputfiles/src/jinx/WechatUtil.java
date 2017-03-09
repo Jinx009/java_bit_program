@@ -15,9 +15,9 @@ import java.io.IOException;
  */
 public class WechatUtil {
 
-    public static final String appId = "wxdc2";
+    public static final String appId = "";
     public static final String appSecret = "7c62d78bfa8bc860845c5f9e3f68e775";
-    public static final String accessToken = "ux1KkyhlIvY02UhZ2kaH0C3wCm4URdwXE3QBcjE3eEoVq4gHdieIUk4aiMNwbn43Hy-96eA34GVfuWm-O-TkCOFbwYYni8p-tDnQ-D-iV7RE54aU0ueGSWuuU_MpuyF-HVHgAGARFR";
+    public static final String accessToken = "P3eQih5msmszhYgmlaNQDtvi9Q-k7cqjJb5c-rI585xln4BO3oZobhhIYyDHISu56OfgZcuj1Cov3ugeNqb-r_CBpI5c-iKNRseU2JGdc_pi2dRXIMANtZr_bIlcMLMpCZDeAFALIM";
 
 
     /**
@@ -64,16 +64,17 @@ public class WechatUtil {
                             "{\"type\":\"view\",\"name\":\"浦东空港\",\"url\":\"http:\\/\\/www.goodmanpudonglogistics.com\\/JMWL\"}"+
                         "]},"+
                         "{\"name\":\"物业项目\",\"sub_button\":["+
-                            "{\"type\":\"view\",\"name\":\"租赁月讯\",\"url\":\"http:\\/\\/yxchay.epub360.com\\/v2\\/manage\\/book\\/hdzqml\"}," +
+                            "{\"type\":\"view\",\"name\":\"租赁月讯\",\"url\":\"http:\\/\\/vacancyschedule.goodmanchina.com\\/index\"}," +
                             "{\"type\":\"click\",\"name\":\"物业出租\",\"key\":\"V_RENT\"},"+
                             "{\"type\":\"click\",\"name\":\"开发项目\",\"key\":\"V_DEV\"},"+
-                            "{\"type\":\"click\",\"name\":\"我们的客户\",\"key\":\"V_CUSTOMER\"}"+
-                        "]},"+
+                            "{\"type\":\"click\",\"name\":\"客户案例\",\"key\":\"V_CUSTOMER\"}"+
+                           "]},"+
                         "{\"name\":\"关于嘉民\",\"sub_button\":["+
                             "{\"type\":\"view\",\"name\":\"嘉民概况\",\"url\":\"http:\\/\\/zvlnuf.epub360.com\\/v2\\/manage\\/book\\/hpdbr5\\/\"},"+
-                            "{\"type\":\"click\",\"name\":\"新闻中心\",\"key\":\"V_NEWS\",\"sub_button\":[]},{\"type\":\"click\",\"name\":\"嘉民关怀\",\"key\":\"V_CARE\"},"+
+                            "{\"type\":\"view\",\"name\":\"新闻中心\",\"url\":\"http:\\/\\/dwz.cn\\/5hGQVK\"}," +
+                            "{\"type\":\"view\",\"name\":\"嘉民关怀\",\"url\":\"http:\\/\\/dwz.cn\\/5hGV7S\"}," +
                             "{\"type\":\"view\",\"name\":\"创新思维\",\"url\":\"http:\\/\\/cn.goodman.com\\/about-us\\/outdoor\"},"+
-                            "{\"type\":\"view\",\"name\":\"加入我们\",\"url\":\"http:\\/\\/cn.goodman.com\\/about-us\\/working-at-goodman\"}" +
+                            "{\"type\":\"view\",\"name\":\"加入我们\",\"url\":\"http:\\/\\/dwz.cn\\/5hGY3q\"}" +
                         "]}"+
                      "]}";
 
@@ -89,9 +90,9 @@ public class WechatUtil {
     }
 
     public static void main(String[] args) throws  IOException{
-//        getAccessToken();
+        //   getAccessToken();
         //System.out.println(getMenuJson());
-        createMenu();
+           createMenu();
     }
 
 
