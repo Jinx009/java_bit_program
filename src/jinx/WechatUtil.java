@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 public class WechatUtil {
 
-    public static final String appId = "wxdc27e7efd0da49ce";
+    public static final String appId = "";
     public static final String appSecret = "7c62d78bfa8bc860845c5f9e3f68e775";
     public static final String accessToken = "P3eQih5msmszhYgmlaNQDtvi9Q-k7cqjJb5c-rI585xln4BO3oZobhhIYyDHISu56OfgZcuj1Cov3ugeNqb-r_CBpI5c-iKNRseU2JGdc_pi2dRXIMANtZr_bIlcMLMpCZDeAFALIM";
 
