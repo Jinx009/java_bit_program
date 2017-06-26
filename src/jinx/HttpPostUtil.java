@@ -15,45 +15,35 @@ import java.nio.charset.Charset;
 public class HttpPostUtil {
 
     public static void main(String[] args) throws IOException {
-        String menuStr = "{" +
-                "\"baseId\":\"000478ad5d03\"," +
-                "\"fatherType\":1," +
-                "\"sonType\":1," +
-                "\"father\":{ \"mac\":\"10086\"," +
-                "\"channelId\":\"\"," +
-                "\"lastSeenTime\":\"2017-02-28 08:55:47\"," +
-                "\"panId\":\"7\"," +
-                "\"heartbeatInterval\":\"120\"" +
-                "}," +
-                "\"sign\":\"000478ad5d03\"," +
-                "\"signType\":0," +
-                "\"son\":" +
-                "[" +
-                "{\"mac\":\"000478ad5d03\"," +
-                "\"channelId\":\"\"," +
-                "\"panId\":\"7\"," +
-                "\"heartbeatInterval\":\"60\"" +
-                " }," +
-                "{ \"mac\":\"000478ad5d03\"," +
-                "\"channelId\":\"\"," +
-                "\"panId\":\"7\"," +
-                "\"heartbeatInterval\":\"60\"" +
-                "}" +
-                "]" +
-                "}";
-
-        String url = "http://127.0.0.1:9001/iot/common/iot/uploadData";
-
+        String menuStr = "id3=0004a8f3e8bf&devid=020000fffe0002f0&tick=1498023165565&event=0&eventtime=1498022969000";
+        String url = "http://carstop.jmwyw.com/event";
+        menuStr += "&sign="+get(MD5Test.MD5(menuStr).toLowerCase());
+        System.out.println(menuStr);
         DefaultHttpClient httpClient = new DefaultHttpClient();
-        HttpPost post = new HttpPost(url);
+        HttpPost post = new HttpPost(url+"?"+menuStr);
         post.addHeader("Content-type","application/json; charset=utf-8");
         post.setHeader("Accept", "application/json");
-        post.setEntity(new StringEntity(menuStr, Charset.forName("UTF-8")));
+        post.setEntity(new StringEntity("", Charset.forName("UTF-8")));
         HttpResponse response = httpClient.execute(post);
         String jsonStr = EntityUtils.toString(response.getEntity(),"UTF-8");
         System.out.println(jsonStr);
 
 
+    }
+
+    public static String get(String s){
+        System.out.println(s);
+        String str = "";
+        for(int i = 0;i<s.length();i++){
+            String ss = String.valueOf(s.charAt(i));
+            if("0".equals(ss)||"9".equals(ss)||"a".equals(ss)){
+                str += "b";
+            }else{
+                str += s.charAt(i);
+            }
+        }
+        System.out.println(str);
+        return str;
     }
 
 }

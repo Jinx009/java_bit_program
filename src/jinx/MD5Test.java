@@ -1,6 +1,7 @@
 package jinx;
 
 import java.security.MessageDigest;
+import java.util.Date;
 
 /**
  * JAVA自带MD5加密测试程序
@@ -36,7 +37,7 @@ public class MD5Test {
 
     public static void main(String[] args) {
 
-        System.out.println(MD5Test.MD5("abcdefg"));
+        System.out.println(MD5("admin").toLowerCase());
     }
 
 }
