@@ -28,6 +28,6 @@ public class MD5 {
 
     public static void main(String[] args) {
 
-        System.out.println(toMD5("medivh"));
+        System.out.println(toMD5("admin").toUpperCase());
     }
 }

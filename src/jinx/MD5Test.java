@@ -37,7 +37,7 @@ public class MD5Test {
 
     public static void main(String[] args) {
 
-        System.out.println(MD5("admin").toLowerCase());
+        System.out.println(MD5("001497129bc6{\"mac\":\"020000fffe000299\",\"reportTime\":\"1499337735\",\"status\":\"0\",\"bluetooths\":[{\"signal\":\"-67\",\"uuid\":\"zw_000001\"}]}zhanway2016"));
     }
 
 }

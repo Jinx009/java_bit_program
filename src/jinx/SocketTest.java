@@ -10,7 +10,7 @@ public class SocketTest {
 
     public static void main(String args[]) {
         try{
-            Socket socket=new Socket("119.57.132.120",6001);
+            Socket socket=new Socket("localhost",8080);
             System.out.print(socket.isConnected());
             socket.sendUrgentData(0xFF);
             BufferedReader sin=new BufferedReader(new InputStreamReader(System.in));
