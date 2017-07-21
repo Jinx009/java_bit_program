@@ -17,7 +17,7 @@ public class WechatUtil {
 
     public static final String appId = "wxdc27e7efd0da49ce";
     public static final String appSecret = "7c62d78bfa8bc860845c5f9e3f68e775";
-    public static final String accessToken = "4LjCoH9fcpbEbhQuGHz8zN0UyTkG0rkSOoz8KbjJJl8Lk61dGk5MZzj0rtClIwRQCQ-Vc_ojGWzmwApQIzHO8BuHxhje7Pvstyacg-PF36NL_qesRUVGKpri5PNAgCcoOLOaAHAJGJ";
+    public static final String accessToken = "0Y3VZhvh62WBH15Cx6Npe4ITR2exu0DPgUePBV-vtF3uhBPfIlk7jkN6Uq3PN6Jv2tnLG8pVwBE4XRD_GfFepX2TtQgMUU9EbElDKZkwQ1oIQYbAAAVDL";
 
     /**
      *获取access_token
@@ -69,7 +69,7 @@ public class WechatUtil {
                             "{\"type\":\"click\",\"name\":\"客户案例\",\"key\":\"V_CUSTOMER\"}"+
                            "]},"+
                         "{\"name\":\"关于嘉民\",\"sub_button\":["+
-                            "{\"type\":\"view\",\"name\":\"嘉民概况\",\"url\":\"http:\\/\\/zvlnuf.epub360.com\\/v2\\/manage\\/book\\/hpdbr5\\/\"},"+
+                            "{\"type\":\"view\",\"name\":\"嘉民概况\",\"url\":\"http:\\/\\/zvlnuf.epub360.com\\/v2\\/manage\\/book\\/kgkxc5\\/\"},"+
                             "{\"type\":\"view\",\"name\":\"新闻中心\",\"url\":\"http:\\/\\/dwz.cn\\/5hGQVK\"}," +
                             "{\"type\":\"view\",\"name\":\"嘉民关怀\",\"url\":\"http:\\/\\/dwz.cn\\/5hGV7S\"}," +
                             "{\"type\":\"view\",\"name\":\"创新思维\",\"url\":\"http:\\/\\/cn.goodman.com\\/about-us\\/outdoor\"},"+
@@ -89,9 +89,9 @@ public class WechatUtil {
     }
 
     public static void main(String[] args) throws  IOException{
-//           getAccessToken();
-        //System.out.println(getMenuJson());
-           createMenu();
+        // getAccessToken();
+        // System.out.println(getMenuJson());
+        createMenu();
     }
 
 
