@@ -17,8 +17,7 @@ public class WechatUtil {
 
     public static final String appId = "wxdc27e7efd0da49ce";
     public static final String appSecret = "7c62d78bfa8bc860845c5f9e3f68e775";
-    public static final String accessToken = "0Y3VZhvh62WBH15Cx6Npe4ITR2exu0DPgUePBV-vtF3uhBPfIlk7jkN6Uq3PN6Jv2tnLG8pVwBE4XRD_GfFepX2TtQgMUU9EbElDKZkwQ1oIQYbAAAVDL";
-
+    public static final String accessToken = "DnOl2IVBq6wb4ALDhOEu_IJvAPom5luFctpqK0PyEGznvE77PcLj5QYJIrW3Suf53GrV3LndwIa8M5-vEOX42_F1dGDAxsUMwsx7O4x60idBpBMFyBGrgQ1_bgkqJ79KCUKgAAAFXN";
     /**
      *获取access_token
      * @throws IOException
@@ -64,7 +63,8 @@ public class WechatUtil {
                         "]},"+
                         "{\"name\":\"物业项目\",\"sub_button\":["+
                             "{\"type\":\"view\",\"name\":\"租赁月讯\",\"url\":\"http:\\/\\/vacancyschedule.goodmanchina.com\\/index\"}," +
-                            "{\"type\":\"click\",\"name\":\"物业出租\",\"key\":\"V_RENT\"},"+
+                            "{\"type\":\"view\",\"name\":\"物业出租\",\"url\":\"http:\\/\\/chinapropertyproject.goodmanchina.com/\\/index\"}," +
+//                            "{\"type\":\"click\",\"name\":\"物业出租\",\"key\":\"V_RENT\"},"+
                             "{\"type\":\"click\",\"name\":\"开发项目\",\"key\":\"V_DEV\"},"+
                             "{\"type\":\"click\",\"name\":\"客户案例\",\"key\":\"V_CUSTOMER\"}"+
                            "]},"+
@@ -89,7 +89,7 @@ public class WechatUtil {
     }
 
     public static void main(String[] args) throws  IOException{
-        // getAccessToken();
+        //  getAccessToken();
         // System.out.println(getMenuJson());
         createMenu();
     }
