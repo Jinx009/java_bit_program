@@ -15,14 +15,12 @@ import java.nio.charset.Charset;
 public class HttpPostUtil {
 
     public static void main(String[] args) throws IOException {
-        String menuStr = "id3=0004a8f3e8bf&devid=020000fffe0002f0&tick=1498023165565&event=0&eventtime=1498022969000";
-        String url = "http://carstop.jmwyw.com/event";
-        menuStr += "&sign="+get(MD5Test.MD5(menuStr).toLowerCase());
-        System.out.println(menuStr);
+        String menuStr = "";
+        String url = "http://127.0.0.1:9001/gtw/weixin/signIn";
         DefaultHttpClient httpClient = new DefaultHttpClient();
         HttpPost post = new HttpPost(url+"?"+menuStr);
-        post.addHeader("Content-type","application/json; charset=utf-8");
-        post.setHeader("Accept", "application/json");
+        post.addHeader("Content-type","application/xml; charset=utf-8");
+        post.setHeader("Accept", "application/xml");
         post.setEntity(new StringEntity("", Charset.forName("UTF-8")));
         HttpResponse response = httpClient.execute(post);
         String jsonStr = EntityUtils.toString(response.getEntity(),"UTF-8");
