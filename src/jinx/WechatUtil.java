@@ -16,8 +16,10 @@ import java.io.IOException;
 public class WechatUtil {
 
     public static final String appId = "wxdc27e7efd0da49ce";
-    public static final String appSecret = "7c62d78bfa8bc860845c5f9e3f68e775abc";
-    public static final String accessToken = "VYAoFXRkyQaVdDigWf7QE1xhfK6BaTTA7xWxKkIDOoYPcrGP6cXxMVH1w4ERQPguQo2k5NYUUP8-GoXSblNCGaweCb8WBHr-BghhC_VgIutW8kUDk6qoe_QNymNetKu0FQBcACAOZK";
+    public static final String appSecret = "7c62d78bfa8bc860845c5f9e3f68e775";
+    public static final String accessToken = "f9puWSAwjLI4f8ixbiNQCDsLcOsJ030TgYySb14JlTsnencT2jfuoVRZhE44Xyhc5XV2Fec7YIEDNul5YETN5qw0a3LqvHu1G1p5GgECLSMYOGjAAABRJ";
+
+
     /**
      *获取access_token
      * @throws IOException
@@ -60,7 +62,7 @@ public class WechatUtil {
                 "{\"button\":["+
                         "{\"name\":\"物业360\",\"sub_button\":["+
                         "{\"type\":\"view\",\"name\":\"平湖VR\",\"url\":\"http:\\/\\/pinghuvr.goodmanchina.com.cn/\"},"+
-                        "{\"type\":\"view\",\"name\":\"浦东空港\",\"url\":\"http:\\/\\/www.goodmanpudonglogistics.com\\/JMWL\"}"+
+                        "{\"type\":\"view\",\"name\":\"浦东空港\",\"url\":\"http:\\/\\/pudong360.goodmanchina.com.cn/\\/JMWLVR\"}"+
                         "]},"+
                         "{\"name\":\"物业项目\",\"sub_button\":["+
                         "{\"type\":\"view\",\"name\":\"租赁月讯\",\"url\":\"http:\\/\\/vacancyschedule.goodmanchina.com.cn\\/index\"}," +
@@ -90,7 +92,7 @@ public class WechatUtil {
     }
 
     public static void main(String[] args) throws  IOException{
-        // getAccessToken();
+        //   getAccessToken();
         //   System.out.println(getMenuJson());
          createMenu();
     }
