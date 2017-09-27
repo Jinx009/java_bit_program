@@ -17,7 +17,7 @@ public class WechatUtil {
 
     public static final String appId = "wxdc27e7efd0da49ce";
     public static final String appSecret = "7c62d78bfa8bc860845c5f9e3f68e775abc";
-    public static final String accessToken = "DnOl2IVBq6wb4ALDhOEu_IJvAPom5luFctpqK0PyEGznvE77PcLj5QYJIrW3Suf53GrV3LndwIa8M5-vEOX42_F1dGDAxsUMwsx7O4x60idBpBMFyBGrgQ1_bgkqJ79KCUKgAAAFXN";
+    public static final String accessToken = "VYAoFXRkyQaVdDigWf7QE1xhfK6BaTTA7xWxKkIDOoYPcrGP6cXxMVH1w4ERQPguQo2k5NYUUP8-GoXSblNCGaweCb8WBHr-BghhC_VgIutW8kUDk6qoe_QNymNetKu0FQBcACAOZK";
     /**
      *获取access_token
      * @throws IOException
@@ -56,26 +56,27 @@ public class WechatUtil {
      * @throws IOException
      */
     public static void createMenu() throws IOException {
-        String menuStr =
-                    "{\"button\":["+
+                String menuStr =
+                "{\"button\":["+
                         "{\"name\":\"物业360\",\"sub_button\":["+
-                            "{\"type\":\"view\",\"name\":\"浦东空港\",\"url\":\"http:\\/\\/www.goodmanpudonglogistics.com\\/JMWL\"}"+
+                        "{\"type\":\"view\",\"name\":\"平湖VR\",\"url\":\"http:\\/\\/pinghuvr.goodmanchina.com.cn/\"},"+
+                        "{\"type\":\"view\",\"name\":\"浦东空港\",\"url\":\"http:\\/\\/www.goodmanpudonglogistics.com\\/JMWL\"}"+
                         "]},"+
                         "{\"name\":\"物业项目\",\"sub_button\":["+
-                            "{\"type\":\"view\",\"name\":\"租赁月讯\",\"url\":\"http:\\/\\/vacancyschedule.goodmanchina.com\\/index\"}," +
-                            "{\"type\":\"view\",\"name\":\"物业出租\",\"url\":\"http:\\/\\/chinapropertyproject.goodmanchina.com/\\/index\"}," +
+                        "{\"type\":\"view\",\"name\":\"租赁月讯\",\"url\":\"http:\\/\\/vacancyschedule.goodmanchina.com.cn\\/index\"}," +
+                        "{\"type\":\"view\",\"name\":\"物业出租\",\"url\":\"http:\\/\\/chinapropertyproject.goodmanchina.com.cn/\\/index\"}," +
 //                            "{\"type\":\"click\",\"name\":\"物业出租\",\"key\":\"V_RENT\"},"+
-                            "{\"type\":\"click\",\"name\":\"开发项目\",\"key\":\"V_DEV\"},"+
-                            "{\"type\":\"click\",\"name\":\"客户案例\",\"key\":\"V_CUSTOMER\"}"+
-                           "]},"+
+                        "{\"type\":\"click\",\"name\":\"开发项目\",\"key\":\"V_DEV\"},"+
+                        "{\"type\":\"click\",\"name\":\"客户案例\",\"key\":\"V_CUSTOMER\"}"+
+                        "]},"+
                         "{\"name\":\"关于嘉民\",\"sub_button\":["+
-                            "{\"type\":\"view\",\"name\":\"嘉民概况\",\"url\":\"http:\\/\\/zvlnuf.epub360.com\\/v2\\/manage\\/book\\/kgkxc5\\/\"},"+
-                            "{\"type\":\"view\",\"name\":\"新闻中心\",\"url\":\"http:\\/\\/dwz.cn\\/5hGQVK\"}," +
-                            "{\"type\":\"view\",\"name\":\"嘉民关怀\",\"url\":\"http:\\/\\/dwz.cn\\/5hGV7S\"}," +
-                            "{\"type\":\"view\",\"name\":\"创新思维\",\"url\":\"http:\\/\\/cn.goodman.com\\/about-us\\/outdoor\"},"+
-                            "{\"type\":\"view\",\"name\":\"加入我们\",\"url\":\"http:\\/\\/dwz.cn\\/5hGY3q\"}" +
+                        "{\"type\":\"view\",\"name\":\"嘉民概况\",\"url\":\"http:\\/\\/zvlnuf.epub360.com\\/v2\\/manage\\/book\\/kgkxc5\\/\"},"+
+                        "{\"type\":\"view\",\"name\":\"新闻中心\",\"url\":\"http:\\/\\/dwz.cn\\/5hGQVK\"}," +
+                        "{\"type\":\"view\",\"name\":\"嘉民关怀\",\"url\":\"http:\\/\\/dwz.cn\\/5hGV7S\"}," +
+                        "{\"type\":\"view\",\"name\":\"创新思维\",\"url\":\"http:\\/\\/cn.goodman.com\\/about-us\\/outdoor\"},"+
+                        "{\"type\":\"view\",\"name\":\"加入我们\",\"url\":\"http:\\/\\/dwz.cn\\/5hGY3q\"}" +
                         "]}"+
-                     "]}";
+                        "]}";
 
         String url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token="+ accessToken;
 
@@ -89,9 +90,9 @@ public class WechatUtil {
     }
 
     public static void main(String[] args) throws  IOException{
-        //  getAccessToken();
-        // System.out.println(getMenuJson());
-        createMenu();
+        // getAccessToken();
+        //   System.out.println(getMenuJson());
+         createMenu();
     }
 
 
