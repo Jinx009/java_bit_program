@@ -4,48 +4,42 @@ import com.alibaba.fastjson.JSON;
 
 import java.io.*;
 import java.net.Socket;
+import java.net.UnknownHostException;
 
 public class TcpClient {
-    public static final String IP_ADDR = "192.168.1.42";//服务器地址
-    public static final int PORT = 8080;//服务器端口号
+    public static final String IP_ADDR = "192.168.1.88";//服务器地址
+    public static final int PORT = 8888;//服务器端口号
 
     public static void main(String[] args) {
-        System.out.println("客户端启动...");
-        System.out.println("当接收到服务器端字符为 \"OK\" 的时候, 客户端将终止\n");
-        while (true) {
-            Socket socket = null;
-            try {
-                //创建一个流套接字并将其连接到指定主机上的指定端口号
-                socket = new Socket(IP_ADDR, PORT);
-                //读取服务器端数据
-                DataInputStream input = new DataInputStream(socket.getInputStream());
-                //向服务器端发送数据
-                DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-                out.writeUTF("news");
-
-                String ret = input.readUTF();
-                System.out.println("服务器端返回过来的是: " + ret);
-                // 如接收到 "OK" 则断开连接
-                if ("OK".equals(ret)) {
-                    System.out.println("客户端将关闭连接");
-                    Thread.sleep(500);
-                    break;
-                }
-
-                out.close();
-                input.close();
-            } catch (Exception e) {
-                System.out.println("客户端异常:" + JSON.toJSONString(e));
-            } finally {
-                if (socket != null) {
-                    try {
-                        socket.close();
-                    } catch (IOException e) {
-                        socket = null;
-                        System.out.println("客户端 finally 异常:" + e);
-                    }
-                }
+        try {
+            //创建一个客户端socket
+            Socket socket = new Socket("localhost",8888);
+            //向服务器端传递信息
+            OutputStream ots = socket.getOutputStream();
+            PrintWriter pw = new PrintWriter(ots);
+            pw.write("123");
+            pw.flush();
+            //关闭输出流
+            socket.shutdownOutput();
+            //获取服务器端传递的数据
+            InputStream is = socket.getInputStream();
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+            String info = null;
+            while((info=br.readLine())!=null){
+                System.out.println("我是客户端，服务器说："+info);
             }
+            //关闭资源
+            br.close();
+            isr.close();
+            is.close();
+            pw.close();
+            ots.close();
+            socket.close();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
