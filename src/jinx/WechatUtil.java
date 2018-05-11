@@ -15,9 +15,9 @@ import java.io.IOException;
  */
 public class WechatUtil {
 
-    public static final String appId = "wxdc27e7efd0da49ce";
-    public static final String appSecret = "7c62d78bfa8bc860845c5f9e3f68e775abcd";
-    public static final String accessToken = "f9puWSAwjLI4f8ixbiNQCDsLcOsJ030TgYySb14JlTsnencT2jfuoVRZhE44Xyhc5XV2Fec7YIEDNul5YETN5qw0a3LqvHu1G1p5GgECLSMYOGjAAABRJ";
+    public static final String appId = "wx7c1fd7f9fd7f887";
+    public static final String appSecret = "c615bb23228ec3c3cba61a6fcf129ee2";
+    public static final String accessToken = "9_QIWhYaFIYWh4qHakS1vW5FqN9h0JtnCPTv6lhGx6cPi-uuvhx3khOtSZFONw5yzO4oZNHCXXOlh_JHm_5vrw9lkuxaBXXkfLhzE8Edu2lC8vQVrHERTWHCc4KdBS6mppvbn0Lj_0AXjuoSfSGKTbADAWAJ";
 
 
     /**
@@ -59,26 +59,25 @@ public class WechatUtil {
      */
     public static void createMenu() throws IOException {
                 String menuStr =
-                "{\"button\":["+
-                        "{\"name\":\"物业360\",\"sub_button\":["+
-                        "{\"type\":\"view\",\"name\":\"平湖VR\",\"url\":\"http:\\/\\/pinghuvr.goodmanchina.com.cn/\"},"+
-                        "{\"type\":\"view\",\"name\":\"浦东空港\",\"url\":\"http:\\/\\/pudong360.goodmanchina.com.cn/\\/JMWLVR\"}"+
-                        "]},"+
-                        "{\"name\":\"物业项目\",\"sub_button\":["+
-                        "{\"type\":\"view\",\"name\":\"租赁月讯\",\"url\":\"http:\\/\\/vacancyschedule.goodmanchina.com.cn\\/index\"}," +
-                        "{\"type\":\"view\",\"name\":\"物业出租\",\"url\":\"http:\\/\\/chinapropertyproject.goodmanchina.com.cn/\\/index\"}," +
-//                            "{\"type\":\"click\",\"name\":\"物业出租\",\"key\":\"V_RENT\"},"+
-                        "{\"type\":\"click\",\"name\":\"开发项目\",\"key\":\"V_DEV\"},"+
-                        "{\"type\":\"click\",\"name\":\"客户案例\",\"key\":\"V_CUSTOMER\"}"+
-                        "]},"+
-                        "{\"name\":\"关于嘉民\",\"sub_button\":["+
-                        "{\"type\":\"view\",\"name\":\"嘉民概况\",\"url\":\"http:\\/\\/zvlnuf.epub360.com\\/v2\\/manage\\/book\\/kgkxc5\\/\"},"+
-                        "{\"type\":\"view\",\"name\":\"新闻中心\",\"url\":\"http:\\/\\/dwz.cn\\/5hGQVK\"}," +
-                        "{\"type\":\"view\",\"name\":\"嘉民关怀\",\"url\":\"http:\\/\\/dwz.cn\\/5hGV7S\"}," +
-                        "{\"type\":\"view\",\"name\":\"创新思维\",\"url\":\"http:\\/\\/cn.goodman.com\\/about-us\\/outdoor\"},"+
-                        "{\"type\":\"view\",\"name\":\"加入我们\",\"url\":\"http:\\/\\/dwz.cn\\/5hGY3q\"}" +
-                        "]}"+
-                        "]}";
+                "{\n" +
+                        "    \"button\": [" +
+                        "        {" +
+                        "            \"type\": \"view\"," +
+                        "            \"name\": \"微信停车\"," +
+                        "            \"url\": \"http://wx.zhanway.com/gtw/weixin/h5/payment\"" +
+                        "        }," +
+                        "        {" +
+                        "            \"type\": \"view\"," +
+                        "            \"name\": \"泊车\"," +
+                        "            \"url\": \"http://wx.zhanway.com/gtw/weixin/h5/location\"" +
+                        "        }," +
+                        "        {" +
+                        "            \"type\": \"view\"," +
+                        "            \"name\": \"车位预览\"," +
+                        "            \"url\": \"http://app.zhanway.com/themes/park/index.html" +
+                        "        }" +
+                        "    ]" +
+                        "}";
 
         String url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token="+ accessToken;
 
@@ -92,7 +91,7 @@ public class WechatUtil {
     }
 
     public static void main(String[] args) throws  IOException{
-        //   getAccessToken();
+//           getAccessToken();
         //   System.out.println(getMenuJson());
          createMenu();
     }

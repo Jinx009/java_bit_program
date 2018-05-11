@@ -1,26 +1,48 @@
 package jinx.guangdian;
 
+import java.security.MessageDigest;
+
 public class KeyUtils {
 
 
     public static final String DEVICE_URL = "http://carstop.jmwyw.com/action";
-    public static final String STATUS_URL = "http://carstop.jmwyw.com/event";
+    public static final String STATUS_URL = "http://www.parkingyun.com/api/parkPlaceChange";
 
 //    public static final String DEVICE_URL = "http://event.park-man.com/action";
 //    public static final String STATUS_URL = "http://event.park-man.com/event";
 
 
     public static String get(String s){
-        String str = "";
-        for(int i = 0;i<s.length();i++){
-            String ss = String.valueOf(s.charAt(i));
-            if("0".equals(ss)||"9".equals(ss)||"a".equals(ss)){
-                str += "b";
-            }else{
-                str += s.charAt(i);
-            }
-        }
-        return str;
+        return encode(s);
     }
+
+
+    private static final char[] HEX_DIGITS = {'0', '1', '2', '3', '4', '5',
+            '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+
+    private static String getFormattedText(byte[] bytes) {
+        int len = bytes.length;
+        StringBuilder buf = new StringBuilder(len * 2);
+        // 把密文转换成十六进制的字符串形式
+        for (int j = 0; j < len; j++) {
+            buf.append(HEX_DIGITS[(bytes[j] >> 4) & 0x0f]);
+            buf.append(HEX_DIGITS[bytes[j] & 0x0f]);
+        }
+        return buf.toString();
+    }
+
+    public static String encode(String str) {
+        if (str == null) {
+            return null;
+        }
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance("SHA1");
+            messageDigest.update(str.getBytes());
+            return getFormattedText(messageDigest.digest());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }
