@@ -29,5 +29,6 @@ public class Test {
         }
         Integer e = Integer.parseInt(c,2);
         System.out.println(e);
+        System.out.printf("x = %ud, y = %d", 0xAD,0xAD);
     }
 }
