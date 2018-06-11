@@ -16,7 +16,7 @@ public class HttpPostUtil {
 
     public static void main(String[] args) throws IOException {
         String menuStr = "";
-        String url = "http://127.0.0.1:9001/gtw/weixin/signIn";
+        String url = "http://api.opg-iot.cn/thingpark/lrc/rest/downlink?DevEUI=00956900000006DD&FPort=1&Payload=480032025200&FCntDn=1234";
         DefaultHttpClient httpClient = new DefaultHttpClient();
         HttpPost post = new HttpPost(url+"?"+menuStr);
         post.addHeader("Content-type","application/xml; charset=utf-8");
