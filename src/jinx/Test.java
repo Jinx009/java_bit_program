@@ -19,16 +19,22 @@ public class Test {
         System.out.println(s.equals(s1));
         Integer a = Integer.valueOf("AD",16);
         String b = Integer.toBinaryString(a);
+        String[] arr = b.split("");
+        String status = arr[0];
         String c = "";
-        for(String d : b.split("")){
-            if(d.equals("1")){
-                c+= "0";
-            }else{
-                c+= "1";
+        Integer e = Integer.parseInt(b,2);
+        if("1".equals(status)&&arr.length%2==0){
+            for(String d : arr){
+                if(d.equals("1")){
+                    c+= "0";
+                }else{
+                    c+= "1";
+                }
             }
+            e = (Integer.parseInt(c,2)+1)*-1;
         }
-        Integer e = Integer.parseInt(c,2);
         System.out.println(e);
-        System.out.printf("x = %ud, y = %d", 0xAD,0xAD);
+        System.out.println(new Short(String.valueOf(Integer.parseInt("AD",16))));
+//        System.out.printf("x = %ud, y = %d", 0xAD,0xAD);
     }
 }
