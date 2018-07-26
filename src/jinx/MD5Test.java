@@ -37,7 +37,7 @@ public class MD5Test {
 
     public static void main(String[] args) {
 
-        System.out.println(MD5("Id3=0004f2764780&devid=020000fffe00020b&tick=1524729461656&event=0HUABANMA").toLowerCase());
+        System.out.println(MD5("content=3CA1BB040186874403470722803B22C546D178183E&key=gdzxxxkjgfyxgs9981n").toLowerCase());
     }
 
 }
