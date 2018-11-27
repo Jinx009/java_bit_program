@@ -8,7 +8,7 @@ import java.util.concurrent.Future;
 
 public class CallableTest {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
         System.out.println(new CallableTest().new CallableA().call());
         ArrayList<Future<String>> arrs = new ArrayList<Future<String>>();
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -16,7 +16,10 @@ public class CallableTest {
             arrs.add(executorService.submit(new CallableTest().new CallableB()));
         }
         executorService.shutdown();
-        System.out.println(arrs);
+//        System.out.println(arrs);
+        for(Future<String> str : arrs){
+            System.out.println(str.get());
+        }
     }
     class CallableA implements Callable<String>{
         public String call(){

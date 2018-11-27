@@ -21,7 +21,7 @@ public class WriteWordsIntoTxt {
             try {
                 file.createNewFile();
                 FileWriter fileWriter = new FileWriter(url, true);
-                fileWriter.write("添加一行代码\n");
+                fileWriter.write("添加一222行代码\n");
                 fileWriter.flush();
                 fileWriter.close();
 
@@ -29,8 +29,8 @@ public class WriteWordsIntoTxt {
                 e.printStackTrace();
             }
         } else {
-            FileWriter fileWriter = new FileWriter(url, true);
-            fileWriter.write("添加一行代码\n");
+            FileWriter fileWriter = new FileWriter(url, false);
+            fileWriter.write("添加2222一行代码\n");
             fileWriter.flush();
         }
     }
