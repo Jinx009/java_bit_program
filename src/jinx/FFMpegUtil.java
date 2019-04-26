@@ -39,6 +39,10 @@ public class FFMpegUtil {
         }
         command.add("-i");
         command.add(inputPath);
+        command.add("-r");
+        command.add("15");
+        command.add("-vf");
+        command.add("scale=-1:720");
         command.add(outPath);
         ProcessBuilder builder = new ProcessBuilder(command);
         Process process = null;
@@ -69,10 +73,10 @@ public class FFMpegUtil {
 
 
  public static void main(String[] args) {
-    String videoInputPath = "/Users/jinx/Downloads/1.mp4";
-    String coverOutputPath = "/Users/jinx/Downloads/4.gif";
+    String videoInputPath = "/Users/jinx/Downloads/base.mp4";
+    String coverOutputPath = "/Users/jinx/Downloads/base-15-720.gif";
     try {
-        convetor(5,"00:00:01",videoInputPath,coverOutputPath);
+        convetor(0,"00:00:00",videoInputPath,coverOutputPath);
     } catch (Exception e) {
        e.printStackTrace();
     }

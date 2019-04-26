@@ -8,8 +8,8 @@ import java.net.SocketException;
 
 public class UdpServer {
 
-    private final static int PORT = 1121;
-    private static final String HOSTNAME = "124.74.252.162";
+    private final static int PORT = 7777;
+    private static final String HOSTNAME = "106.14.94.245";
 
 
     public static void send(String data){
@@ -40,7 +40,7 @@ public class UdpServer {
     }
 
     public static void main(String[] args){
-        send("1122");
+        send("000919032900000C69FFD20000B200FFEE00001A00FF9A000CF3089E00000000000000000000");
     }
 
 }
