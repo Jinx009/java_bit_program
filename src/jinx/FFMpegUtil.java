@@ -15,7 +15,7 @@ public class FFMpegUtil {
     //private static String ffmpegEXE = "D:\\Downloads\\ffmpeg-20180528-ebf85d3-win64-static\\bin\\ffmpeg.exe";
 
     //Linux与mac下  ffmpeg的路径
-    private static String ffmpegEXE = "/usr/local/Cellar/ffmpeg/4.1.2/bin/ffmpeg";
+    private static String ffmpegEXE = "/usr/local/Cellar/ffmpeg/4.1.4_1/bin/ffmpeg";
 
 
     /**

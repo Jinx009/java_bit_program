@@ -21,7 +21,7 @@ public class GifUtils {
     // "D:\\Downloads\\ffmpeg-20180528-ebf85d3-win64-static\\bin\\ffmpeg.exe";
 
     // Linux与mac下 ffmpeg的路径
-    private static String ffmpegEXE = "/usr/local/Cellar/ffmpeg/4.1.2/bin/ffmpeg";
+    private static String ffmpegEXE = "/usr/local/Cellar/ffmpeg/4.1.4_1/bin/ffmpeg";
 
 //    private static String ffmpegEXE = "/usr/local/bin/ffmpeg";
 
@@ -167,7 +167,7 @@ public class GifUtils {
         command.add("-vframes");
         command.add("1");
         command.add("-s");
-        command.add("2688x1520");
+        command.add("1920x1072");
         if(StringUtil.isNotBlank(outName)){
             command.add(outName);
         }else{
