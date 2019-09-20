@@ -167,7 +167,7 @@ public class GifUtils {
         command.add("-vframes");
         command.add("1");
         command.add("-s");
-        command.add("1920x1072");
+        command.add("544x960");
         if(StringUtil.isNotBlank(outName)){
             command.add(outName);
         }else{

@@ -6,12 +6,12 @@ import java.util.Date;
 public class VedioUtils {
 
     public static void main(String[] args) throws ParseException {
-        String fileName = "/Users/jinx/Downloads/jinx.mp4";
+        String fileName = "/Users/jinx/Downloads/2.mp4";
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         SimpleDateFormat f = new SimpleDateFormat("HH:mm:ss");
-        Date date = format.parse("1998-01-01 00:00:01");
+        Date date = format.parse("1998-01-01 00:00:00");
         String time = "";
-        for( int i = 0;i<167;i++){
+        for( int i = -0;i<15;i++){
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(date);
             calendar.add(Calendar.SECOND,1);
