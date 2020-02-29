@@ -41,6 +41,7 @@ public class UdpServer {
 
     public static void main(String[] args){
         send("000919032900000C69FFD20000B200FFEE00001A00FF9A000CF3089E00000000000000000000");
+        String s = "{\"datastreams\":[{\"id\":\"012_1\",\"datapoints\":[{\"value\":{\"X\":0,\"Y\":0,\"Z\":0}}]}]}";
     }
 
 }
